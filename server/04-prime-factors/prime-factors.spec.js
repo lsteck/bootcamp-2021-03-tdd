@@ -4,9 +4,17 @@ describe('the prime factors canary spec', () => {
   });
 });
 
+const primeFactors = () => [];
+
 describe('a prime factors function should', () => {
-  it.todo('return none for 1');
-  it.todo('return 2 for 2');
+  it('return none for 1', () => {
+    expect(primeFactors(1)).toEqual([]);
+  });
+  
+  it('return 2 for 2', () => {
+    expect(primeFactors(2)).toEqual([2]);
+  });
+
   it.todo('return 3 for 3');
   it.todo('return 2, 2 for 4');
   it.todo('return 5 for 5');
