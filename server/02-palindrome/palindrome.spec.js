@@ -4,13 +4,13 @@ describe('the palindrome canary spec', () => {
   });
 });
 
-let isPalindrome = (word) => {
-  word = word.replace(/ /g, '');
+let isPalindrome = (phrase) => {
+  phrase = phrase.toLowerCase().replace(/ /g, '');
 
-  const reversedWord = word.split('').reverse().join('');
-
-  return word === reversedWord;
+  return phrase === reverseOf(phrase);
 };
+
+const reverseOf = (value) => value.split('').reverse().join('')
 
 describe('Given a palindrome function ', () => {
   it('should return true when called with radar', () => {
@@ -27,5 +27,9 @@ describe('Given a palindrome function ', () => {
 
   it('should return true when called with "mom dad mom"', () => {
     expect(isPalindrome('mom dad mom')).toBe(true);
+  });
+
+  it('should return true when called with "Mom Dad Mom"', () => {
+    expect(isPalindrome('Mom Dad Mom')).toBe(true);
   });
 });
