@@ -5,6 +5,7 @@ describe('the palindrome canary spec', () => {
 });
 
 let isPalindrome = (word) => {
+  word = word.replace(' ', '');
   const reversedWord = word.split('').reverse().join('');
 
   return word === reversedWord;
@@ -18,4 +19,8 @@ describe('Given a palindrome function ', () => {
   it('should return false when called with dog', () => {
     expect(isPalindrome('dog')).toBe(false);
   });
+
+  it('should return true when called with "race car"', () => {
+    expect(isPalindrome('race car')).toBe(true);
+  })
 });
