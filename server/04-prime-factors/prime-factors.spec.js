@@ -6,11 +6,14 @@ describe('the prime factors canary spec', () => {
 
 const primeFactors = number => {
   const factors = [];
-  if(number % 2 === 0){
+
+  if (number % 2 === 0) {
     factors.push(2);
-    number /=2;
+    number /= 2;
   }
+
   if (number > 1) factors.push(number);
+
   return factors;
 };
 
@@ -31,7 +34,6 @@ describe('a prime factors function should', () => {
     expect(primeFactors(4)).toEqual([2,2]);
   });
 
-  it.todo('return 5 for 5');
   it.todo('return 2, 3 for 6');
   it.todo('return 7 for 7');
   it.todo('return 2, 2, 2 for 8');
