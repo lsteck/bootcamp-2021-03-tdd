@@ -4,7 +4,10 @@ describe('the prime factors canary spec', () => {
   });
 });
 
-const primeFactors = () => [];
+const primeFactors = number => {
+  if(number === 1) return []
+  return [2];
+};
 
 describe('a prime factors function should', () => {
   it('return none for 1', () => {
