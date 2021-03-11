@@ -34,8 +34,15 @@ describe('a prime factors function should', () => {
     expect(primeFactors(4)).toEqual([2,2]);
   });
 
-  it.todo('return 2, 3 for 6');
-  it.todo('return 7 for 7');
-  it.todo('return 2, 2, 2 for 8');
+  it('return 2, 3 for 6', () => {
+    expect(primeFactors(6)).toEqual([2,3]);
+  });
+
+  it('return 7 for 7', () => {
+    expect(primeFactors(7)).toEqual([7]);
+  });
+  it('return 2, 2, 2 for 8', () => {
+    expect(primeFactors(8)).toEqual([2,2,2]);
+  });
   it.todo('return 3, 3 for 9');
 });
