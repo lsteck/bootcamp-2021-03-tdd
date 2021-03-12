@@ -48,4 +48,12 @@ describe('a prime factors function should', () => {
   it('return 3, 3 for 9', () => {
     expect(primeFactors(9)).toEqual([3, 3]);
   });
+
+  it('return none for 0', () => {
+    expect(primeFactors(0)).toEqual([]);
+  })
+
+  it('return 1223 for 1223', () => {
+    expect(primeFactors(1223)).toEqual([1223]);
+  })
 });
